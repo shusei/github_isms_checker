@@ -1,9 +1,10 @@
 import json
 import re
 import ssl
+import time
 import urllib.request
 import urllib.parse
-from datetime import datetime
+from datetime import datetime, timezone
 
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
@@ -35,7 +36,7 @@ def extract_roc_date(html_content):
             return f"民國 {y} 年 {month:02d} 月 {d:02d} 日"
     return ""
 
-def fetch_url(url):
+def fetch_url(url, retries=2, delay=2):
     ctx = ssl.create_default_context()
     ctx.check_hostname = False
     ctx.verify_mode = ssl.CERT_NONE
@@ -48,8 +49,17 @@ def fetch_url(url):
             "Accept-Language": "zh-TW,zh;q=0.9"
         }
     )
-    with urllib.request.urlopen(req, timeout=15, context=ctx) as response:
-        return response.read().decode('utf-8', errors='ignore')
+    
+    last_exception = None
+    for attempt in range(retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=25, context=ctx) as response:
+                return response.read().decode('utf-8', errors='ignore')
+        except Exception as e:
+            last_exception = e
+            if attempt < retries:
+                time.sleep(delay)
+    raise last_exception
 
 def main():
     with open('regulations.json', 'r', encoding='utf-8') as f:
@@ -92,7 +102,7 @@ def main():
         results.append(entry)
         
     output_data = {
-        "updatedAt": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC"),
+        "updatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
         "reviewCount": review_count,
         "data": results
     }
