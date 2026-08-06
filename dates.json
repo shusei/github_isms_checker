@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-06 06:10:42 UTC",
-  "reviewCount": 1,
+  "updatedAt": "2026-08-06 07:24:02 UTC",
+  "reviewCount": 0,
   "data": [
     {
       "no": 1,
@@ -16,12 +16,12 @@
     {
       "no": 2,
       "name": "中華民國刑法318-1,-2,339-3,第三十六章妨害電腦使用罪",
-      "announcementDate": "民國 115 年 03 月 13 日",
+      "announcementDate": "民國 115 年 07 月 22 日",
       "source": "全國法規資料庫",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=C0000001",
       "latestAnnouncementDate": "民國 115 年 07 月 22 日",
       "checkSuccess": true,
-      "needsReview": true,
+      "needsReview": false,
       "message": ""
     },
     {
