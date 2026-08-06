@@ -16,10 +16,14 @@ def roc_date_to_number(date_str):
         return 0
     return int(m.group(1)) * 10000 + int(m.group(2)) * 100 + int(m.group(3))
 
+import html
+
 def extract_roc_date(html_content):
     if not html_content:
         return ""
-    text = re.sub(r'<[^>]+>', ' ', html_content)
+    # Unescape HTML entities (e.g. &#x6C11;&#x570B;115&#x5E74;3&#x6708;12&#x65E5;)
+    content = html.unescape(html_content)
+    text = re.sub(r'<[^>]+>', ' ', content)
     text = re.sub(r'\s+', ' ', text)
     
     patterns = [
