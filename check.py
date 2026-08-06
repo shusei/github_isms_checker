@@ -4,7 +4,7 @@ import ssl
 import time
 import urllib.request
 import urllib.parse
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
@@ -102,11 +102,12 @@ def main():
         except Exception as ex:
             entry["message"] = str(ex)
             print(f"  -> Error: {ex}")
-            
         results.append(entry)
         
+    # 轉為台灣時間 UTC+8
+    tz_tw = timezone(timedelta(hours=8))
     output_data = {
-        "updatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
+        "updatedAt": datetime.now(tz_tw).strftime("%Y-%m-%d %H:%M:%S (UTC+8)"),
         "reviewCount": review_count,
         "data": results
     }
