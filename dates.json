@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-06 06:03:48 UTC",
+  "updatedAt": "2026-08-06 06:09:00 UTC",
   "reviewCount": 1,
   "data": [
     {
@@ -118,10 +118,10 @@
       "announcementDate": "民國 115 年 03 月 12 日",
       "source": "SELaw",
       "url": "https://www.selaw.com.tw/Chinese/RegulatoryInformationResult?sysNumber=LW10812093",
-      "latestAnnouncementDate": "",
-      "checkSuccess": false,
+      "latestAnnouncementDate": "民國 115 年 03 月 12 日",
+      "checkSuccess": true,
       "needsReview": false,
-      "message": "查無官方日期"
+      "message": ""
     }
   ]
 }
