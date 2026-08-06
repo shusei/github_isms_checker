@@ -1,5 +1,6 @@
 import json
 import re
+import ssl
 import urllib.request
 import urllib.parse
 from datetime import datetime
@@ -35,6 +36,10 @@ def extract_roc_date(html_content):
     return ""
 
 def fetch_url(url):
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+
     req = urllib.request.Request(
         url,
         headers={
@@ -43,7 +48,7 @@ def fetch_url(url):
             "Accept-Language": "zh-TW,zh;q=0.9"
         }
     )
-    with urllib.request.urlopen(req, timeout=15) as response:
+    with urllib.request.urlopen(req, timeout=15, context=ctx) as response:
         return response.read().decode('utf-8', errors='ignore')
 
 def main():

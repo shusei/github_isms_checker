@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-06 05:15:56 UTC",
-  "reviewCount": 0,
+  "updatedAt": "2026-08-06 05:23:03 UTC",
+  "reviewCount": 1,
   "data": [
     {
       "no": 1,
@@ -8,10 +8,10 @@
       "announcementDate": "民國 114 年 11 月 11 日",
       "source": "全國法規資料庫",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
-      "latestAnnouncementDate": "",
-      "checkSuccess": false,
+      "latestAnnouncementDate": "民國 114 年 11 月 11 日",
+      "checkSuccess": true,
       "needsReview": false,
-      "message": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1082)>"
+      "message": ""
     },
     {
       "no": 2,
@@ -19,10 +19,10 @@
       "announcementDate": "民國 115 年 03 月 13 日",
       "source": "全國法規資料庫",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=C0000001",
-      "latestAnnouncementDate": "",
-      "checkSuccess": false,
-      "needsReview": false,
-      "message": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1082)>"
+      "latestAnnouncementDate": "民國 115 年 07 月 22 日",
+      "checkSuccess": true,
+      "needsReview": true,
+      "message": ""
     },
     {
       "no": 3,
@@ -30,10 +30,10 @@
       "announcementDate": "民國 105 年 03 月 02 日",
       "source": "全國法規資料庫",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050022",
-      "latestAnnouncementDate": "",
-      "checkSuccess": false,
+      "latestAnnouncementDate": "民國 105 年 03 月 02 日",
+      "checkSuccess": true,
       "needsReview": false,
-      "message": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1082)>"
+      "message": ""
     },
     {
       "no": 4,
@@ -41,10 +41,10 @@
       "announcementDate": "民國 111 年 06 月 15 日",
       "source": "全國法規資料庫",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017",
-      "latestAnnouncementDate": "",
-      "checkSuccess": false,
+      "latestAnnouncementDate": "民國 111 年 06 月 15 日",
+      "checkSuccess": true,
       "needsReview": false,
-      "message": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1082)>"
+      "message": ""
     },
     {
       "no": 5,
@@ -52,10 +52,10 @@
       "announcementDate": "民國 114 年 09 月 24 日",
       "source": "全國法規資料庫",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030297",
-      "latestAnnouncementDate": "",
-      "checkSuccess": false,
+      "latestAnnouncementDate": "民國 114 年 09 月 24 日",
+      "checkSuccess": true,
       "needsReview": false,
-      "message": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1082)>"
+      "message": ""
     },
     {
       "no": 6,
@@ -63,10 +63,10 @@
       "announcementDate": "民國 115 年 01 月 05 日",
       "source": "全國法規資料庫",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030303",
-      "latestAnnouncementDate": "",
-      "checkSuccess": false,
+      "latestAnnouncementDate": "民國 115 年 01 月 05 日",
+      "checkSuccess": true,
       "needsReview": false,
-      "message": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1082)>"
+      "message": ""
     },
     {
       "no": 7,
@@ -85,10 +85,10 @@
       "announcementDate": "民國 111 年 05 月 04 日",
       "source": "全國法規資料庫",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070007",
-      "latestAnnouncementDate": "",
-      "checkSuccess": false,
+      "latestAnnouncementDate": "民國 111 年 05 月 04 日",
+      "checkSuccess": true,
       "needsReview": false,
-      "message": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1082)>"
+      "message": ""
     },
     {
       "no": 9,
@@ -96,10 +96,10 @@
       "announcementDate": "民國 112 年 03 月 24 日",
       "source": "全國法規資料庫",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070008",
-      "latestAnnouncementDate": "",
-      "checkSuccess": false,
+      "latestAnnouncementDate": "民國 112 年 03 月 24 日",
+      "checkSuccess": true,
       "needsReview": false,
-      "message": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1082)>"
+      "message": ""
     },
     {
       "no": 10,
