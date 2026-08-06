@@ -1,0 +1,79 @@
+[
+  {
+    "no": 1,
+    "name": "個人資料保護法",
+    "announcementDate": "民國 114 年 11 月 11 日",
+    "source": "全國法規資料庫",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021"
+  },
+  {
+    "no": 2,
+    "name": "中華民國刑法318-1,-2,339-3,第三十六章妨害電腦使用罪",
+    "announcementDate": "民國 115 年 03 月 13 日",
+    "source": "全國法規資料庫",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=C0000001"
+  },
+  {
+    "no": 3,
+    "name": "個人資料保護法施行細則",
+    "announcementDate": "民國 105 年 03 月 02 日",
+    "source": "全國法規資料庫",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050022"
+  },
+  {
+    "no": 4,
+    "name": "著作權法",
+    "announcementDate": "民國 111 年 06 月 15 日",
+    "source": "全國法規資料庫",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017"
+  },
+  {
+    "no": 5,
+    "name": "資通安全管理法",
+    "announcementDate": "民國 114 年 09 月 24 日",
+    "source": "全國法規資料庫",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030297"
+  },
+  {
+    "no": 6,
+    "name": "資通安全管理法施行細則",
+    "announcementDate": "民國 115 年 01 月 05 日",
+    "source": "全國法規資料庫",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030303"
+  },
+  {
+    "no": 7,
+    "name": "上市上櫃公司資通安全管控指引",
+    "announcementDate": "民國 113 年 09 月 10 日",
+    "source": "TWSE 法規庫",
+    "url": "https://twse-regulation.twse.com.tw/TW/law/DAT0201.aspx?FLCODE=FL104387"
+  },
+  {
+    "no": 8,
+    "name": "專利法",
+    "announcementDate": "民國 111 年 05 月 04 日",
+    "source": "全國法規資料庫",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070007"
+  },
+  {
+    "no": 9,
+    "name": "專利法施行細則",
+    "announcementDate": "民國 112 年 03 月 24 日",
+    "source": "全國法規資料庫",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070008"
+  },
+  {
+    "no": 10,
+    "name": "臺灣證券交易所股份有限公司對有價證券上市公司重大訊息之查證暨公開處理程序",
+    "announcementDate": "民國 115 年 02 月 05 日",
+    "source": "TWSE 法規庫",
+    "url": "https://twse-regulation.twse.com.tw/TW/law/DAT0201.aspx?FLCODE=FL007111"
+  },
+  {
+    "no": 11,
+    "name": "財團法人中華民國證券櫃檯買賣中心對有價證券上櫃公司重大訊息之查證暨公開處理程序",
+    "announcementDate": "民國 115 年 03 月 12 日",
+    "source": "SELaw",
+    "url": "https://www.selaw.com.tw/Chinese/RegulatoryInformationResult?sysNumber=LW10812093"
+  }
+]

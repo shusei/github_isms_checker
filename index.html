@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISMS 法規鑑定自動檢測儀表板</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        body { background-color: #f4f6f9; color: #2c3e50; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        .container { max-width: 1000px; margin-top: 30px; margin-bottom: 50px; }
+        .card { border-radius: 10px; border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .card-header { background-color: #2c3e50; color: white; border-radius: 10px 10px 0 0 !important; padding: 15px 20px; }
+        .table > thead { background-color: #f8fafc; }
+        .table th { color: #64748b; font-size: 13px; font-weight: 600; text-transform: uppercase; }
+        .badge-review { background-color: #fee2e2; color: #991b1b; border: 1px solid #f87171; font-weight: 600; }
+        .badge-ok { background-color: #dcfce7; color: #166534; border: 1px solid #4ade80; font-weight: 600; }
+        .badge-fail { background-color: #fef3c7; color: #92400e; border: 1px solid #fcd34d; font-weight: 600; }
+        .update-time { font-size: 13px; color: #94a3b8; }
+        .regulation-link { color: #2563eb; text-decoration: none; font-weight: 600; }
+        .regulation-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div id="app" class="container">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h4 class="mb-0"><i class="fa-solid fa-scale-balanced me-2"></i>ISMS 法規鑑定自動檢測儀表板</h4>
+                <span class="update-time" v-if="updatedAt">最後自動更新：{{ updatedAt }}</span>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info d-flex align-items-center mb-4" role="alert">
+                    <i class="fa-solid fa-circle-info fa-lg me-3"></i>
+                    <div>
+                        本頁面由 GitHub Actions 每日自動向政府資料庫與證交所比對。
+                        <strong v-if="reviewCount > 0" class="text-danger ms-2">
+                            ⚠️ 發現 {{ reviewCount }} 筆官方有新版本待檢視！
+                        </strong>
+                        <strong v-else class="text-success ms-2">
+                            🟢 目前所有登錄法規均為最新版本。
+                        </strong>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;" class="text-center">序號</th>
+                                <th>法規名稱</th>
+                                <th style="width: 210px;">登錄日期 / 官方最新</th>
+                                <th style="width: 140px;">來源</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="item in regulations" :key="item.no">
+                                <td class="text-center text-muted fw-bold">{{ item.no }}</td>
+                                <td>
+                                    <a :href="item.url" target="_blank" rel="noopener" class="regulation-link">
+                                        {{ item.name }} <i class="fa-solid fa-arrow-up-right-from-square ms-1 style-icon"></i>
+                                    </a>
+                                    <span v-if="item.needsReview" class="badge badge-review ms-2">官方已有新版本，待檢視</span>
+                                    <span v-if="item.checkSuccess === false" class="badge badge-fail ms-2" :title="item.message">檢測失敗</span>
+                                </td>
+                                <td>
+                                    <div class="fw-bold">{{ item.latestAnnouncementDate || item.announcementDate }}</div>
+                                    <small class="text-muted" v-if="item.latestAnnouncementDate && item.latestAnnouncementDate !== item.announcementDate">
+                                        登錄值: {{ item.announcementDate }}
+                                    </small>
+                                </td>
+                                <td>
+                                    <span class="badge bg-secondary">{{ item.source }}</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    updatedAt: '',
+                    reviewCount: 0,
+                    regulations: []
+                }
+            },
+            mounted() {
+                fetch('dates.json')
+                    .then(res => res.json())
+                    .then(data => {
+                        this.updatedAt = data.updatedAt;
+                        this.reviewCount = data.reviewCount;
+                        this.regulations = data.data;
+                    })
+                    .catch(err => {
+                        console.error('無法載入 dates.json:', err);
+                    });
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
