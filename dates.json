@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09 10:18:09 (UTC+8)",
+  "updatedAt": "2026-08-10 10:22:55 (UTC+8)",
   "reviewCount": 0,
   "data": [
     {
@@ -74,10 +74,10 @@
       "announcementDate": "民國 113 年 09 月 10 日",
       "source": "TWSE 法規庫",
       "url": "https://twse-regulation.twse.com.tw/TW/law/DAT0201.aspx?FLCODE=FL104387",
-      "latestAnnouncementDate": "",
-      "checkSuccess": false,
+      "latestAnnouncementDate": "民國 113 年 09 月 10 日",
+      "checkSuccess": true,
       "needsReview": false,
-      "message": "<urlopen error timed out>"
+      "message": ""
     },
     {
       "no": 8,
@@ -107,10 +107,10 @@
       "announcementDate": "民國 115 年 02 月 05 日",
       "source": "TWSE 法規庫",
       "url": "https://twse-regulation.twse.com.tw/TW/law/DAT0201.aspx?FLCODE=FL007111",
-      "latestAnnouncementDate": "",
-      "checkSuccess": false,
+      "latestAnnouncementDate": "民國 115 年 02 月 05 日",
+      "checkSuccess": true,
       "needsReview": false,
-      "message": "<urlopen error timed out>"
+      "message": ""
     },
     {
       "no": 11,
