@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-02 13:16:50 (UTC+8)",
-  "reviewCount": 1,
+  "updatedAt": "2026-10-03 12:59:46 (UTC+8)",
+  "reviewCount": 2,
   "data": [
     {
       "no": 1,
@@ -107,9 +107,9 @@
       "announcementDate": "民國 115 年 02 月 05 日",
       "source": "TWSE 法規庫",
       "url": "https://twse-regulation.twse.com.tw/TW/law/DAT0201.aspx?FLCODE=FL007111",
-      "latestAnnouncementDate": "民國 115 年 02 月 05 日",
+      "latestAnnouncementDate": "民國 115 年 09 月 30 日",
       "checkSuccess": true,
-      "needsReview": false,
+      "needsReview": true,
       "message": ""
     },
     {
